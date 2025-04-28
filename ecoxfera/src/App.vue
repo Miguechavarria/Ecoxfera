@@ -4,8 +4,7 @@
       <!-- Header PNG -->
       <img class="header" src="@/assets/Header.png" alt="Ecoxfera Header" @click="onHeaderClick" />
       <!-- Logo SVG -->
-      <img src="@/assets/logo/L_E.svg" class="logo" :class="{'fadeIN': animState}"/>
-
+      <LogoLetters :animState="animState" />
 
       <!-- Description -->
       <section class="description">
@@ -22,14 +21,8 @@
 
 <script setup>
 import { ref } from 'vue';
-// Import SVGs via vue-svg-loader or unplugin-icons
-//import LogoLetters from '@/assets/logo/L_E.svg';
-//import DandelionLarge from '@/assets/';
-//import DandelionSmall from '@/assets/';
-//import SeedSVG from '@/assets/seed.svg';
-//import LogoLetters from './components/Logo/LogoLetters.vue';
+import LogoLetters from '@/components/Logo/LogoLetters.vue'
 
-const seedCount = 8;
 const animState = ref(false)
 const onHeaderClick = () => {
   animState.value = !animState.value;
@@ -57,42 +50,6 @@ console.log('oe')
   object-fit: fill;
 }
 
-/* Logo Animation */
-
-@keyframes fadein{
-  0% {
-    opacity: 0;
-  }
-  25%{opacity: 1;}
-  75%{top: 50%;
-  left: 20%;
-  opacity: 1;}
-  100%{
-    top: 10%;
-  left: 10%;
-  opacity: 1;
-  }
-}
-
-.logo {
-  position: relative;
-  top: 50%;
-  left: 20%;
-  height: auto;
-  width: 80px;
-  opacity: 0;
-}
-
-.fadeIN {
-  animation-name: fadein;
-  animation-duration: 4s;
-  animation-timing-function:ease-in;
-  opacity: 1;
-  animation-fill-mode: forwards;
-
-}
-
-
 /* Description Animation */
 .description {
   position: absolute;
@@ -105,8 +62,5 @@ console.log('oe')
   color: #444;
   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
-.step-4 .description {
-  transform: translateX(-50%) translateY(0);
-  opacity: 1;
-}
+
 </style>
