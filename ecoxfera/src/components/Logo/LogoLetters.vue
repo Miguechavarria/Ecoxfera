@@ -49,11 +49,12 @@ const letters = [
 .logo-letters {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .logo-letter {
-  position: absolute;
+  /*position: absolute;*/
   width: 80px;
   height: auto;
   opacity: 0;
@@ -61,17 +62,17 @@ const letters = [
 </style>
 
 <style>
-/* Keyframe genérico: 0% (invisible en pos inicial), 
-   20% (opacidad 1 en pos inicial), 
+/* Keyframe genérico: 0% (invisible en pos inicial),
+   20% (opacidad 1 en pos inicial),
    50% (mantener),
    100% (posición final). */
 
 /* LETRA E */
 @keyframes fade-LE {
-  0%   { opacity: 0; top: 40%; left: 15%; width: 100px; height: auto; }
-  30%  { opacity: 1; width: 100px; height: auto;}
-  65%  { opacity: 1; top: 40%; left: 15%; width: 100px; height: auto; }
-  100% { opacity: 1; top: 10%; left:  5%; width: 100px; height: auto;}
+  0%   { opacity: 0; transform: translate(60px, 680px) scale(0.9) rotate(-10deg); }
+  30%  { opacity: 1;}
+  65%  { opacity: 1; transform: translate(60px, 680px) scale(0.9) rotate(-10deg); }
+  100% { opacity: 1; transform: translate(35px, 225px) scale(0.9) rotate(-50deg);}
 }
 .animate-LE {
   animation: fade-LE 3s ease-in-out forwards;
@@ -79,10 +80,10 @@ const letters = [
 
 /* LETRA C */
 @keyframes fade-LC {
-  0%   { opacity: 0; top: 100%; left: 10%; width: 60px; height: auto;}
-  30%  { opacity: 1;  width: 60px; height: auto;}
-  65%  { opacity: 1; top: 30%; left: 25%; width: 60px; height: auto;}
-  100% { opacity: 1; top: 9%; left: 10%; width: 60px; height: auto; }
+  0%   { opacity: 0; transform: translate(-60px, -30px) scale(0.7) rotate(0deg);}
+  30%  { opacity: 1; }
+  65%  { opacity: 1; transform: translate(50px, 640px) scale(0.7) rotate(0deg);}
+  100% { opacity: 1; transform: translate(-10px, 150px) scale(0.7) rotate(-35deg); }
 }
 .animate-LC {
   animation: fade-LC 3s ease-in-out forwards;
@@ -90,10 +91,10 @@ const letters = [
 
 /* LETRA O */
 @keyframes fade-LO {
-  0%   { opacity: 0; top: 40%; left: 30%; width: 50px; height: auto;}
+  0%   { opacity: 0; transform: translate(40px, 600px) scale(0.45) rotate(10deg);}
   30%  { opacity: 1; }
-  65%  { opacity: 1; top: 40%; left: 30%; width: 50px; height: auto; }
-  100% { opacity: 1; top: 12%; left: 14%;  width: 60px; height: auto;}
+  65%  { opacity: 1; transform: translate(40px, 600px) scale(0.45) rotate(10deg);}
+  100% { opacity: 1; transform: translate(-60px, 83px) scale(0.6) rotate(-60deg); }
 }
 .animate-LO {
   animation: fade-LO 3s ease-in-out forwards;
@@ -101,10 +102,10 @@ const letters = [
 
 /* LETRA X */
 @keyframes fade-LX {
-  0%   { opacity: 0; top: 42%; left: 36%; }
+  0%   { opacity: 0; transform: translate(25px, 640px) scale(0.9) rotate(40deg); }
   30%  { opacity: 1; }
-  65%  { opacity: 1; top: 42%; left: 36%; }
-  100% { opacity: 1; top: 8%; left: 17%; }
+  65%  { opacity: 1; transform: translate(25px, 640px) scale(0.9) rotate(40deg); }
+  100% { opacity: 1; transform: translate(-90px, 50px) scale(0.9) rotate(-18deg); }
 }
 .animate-LX {
   animation: fade-LX 3s ease-in-out forwards;
@@ -112,10 +113,10 @@ const letters = [
 
 /* LETRA F */
 @keyframes fade-LF {
-  0%   { opacity: 0; top: 34%; left: 43%; width: 60px; height: auto; }
+  0%   { opacity: 0; transform: translate(25px, 640px) scale(0.6) rotate(10deg); }
   30%  { opacity: 1; }
-  65%  { opacity: 1; top: 34%; left: 43%; width: 60px; height: auto;}
-  100% { opacity: 1; top: 3%; left: 21%; width: 60px; height: auto;}
+  65%  { opacity: 1; transform: translate(25px, 640px) scale(0.6) rotate(10deg);}
+  100% { opacity: 1; transform: translate(-120px, 0px) scale(0.6) rotate(-10deg);}
 }
 .animate-LF {
   animation: fade-LF 3s ease-in-out forwards;
@@ -123,10 +124,10 @@ const letters = [
 
 /* SEGUNDA E */
 @keyframes fade-LE2 {
-  0%   { opacity: 0; top: 34%; left: 48%; width: 60px; height: auto;}
+  0%   { opacity: 0; transform: translate(0px, 640px) scale(0.7) rotate(-25deg);}
   30%  { opacity: 1; }
-  65%  { opacity: 1; top: 34%; left: 48%; width: 60px; height: auto;}
-  100% { opacity: 1; top: 3%; left: 24%; width: 60px; height: auto;}
+  65%  { opacity: 1; transform: translate(0px, 640px) scale(0.7) rotate(-25deg);}
+  100% { opacity: 1; transform: translate(-130px, -10px) scale(0.7) rotate(-25deg);}
 }
 .animate-LE2 {
   animation: fade-LE2 3s ease-in-out forwards;
@@ -134,10 +135,10 @@ const letters = [
 
 /* LETRA R */
 @keyframes fade-LR {
-  0%   { opacity: 0; top: 40%; left: 54%; width: 80px; height: auto;}
+  0%   { opacity: 0; transform: translate(0px, 640px) scale(0.7) rotate(-25deg);}
   30%  { opacity: 1; }
-  65%  { opacity: 1; top: 40%; left: 54%; width: 80px; height: auto;}
-  100% { opacity: 1; top: 6%; left: 28%; width: 60px; height: auto;}
+  65%  { opacity: 1; transform: translate(0px, 640px) scale(0.7) rotate(-25deg);}
+  100% { opacity: 1; transform: translate(-145px, -20px) scale(0.6) rotate(-5deg);}
 }
 .animate-LR {
   animation: fade-LR 3s ease-in-out forwards;
@@ -145,10 +146,10 @@ const letters = [
 
 /* LETRA A */
 @keyframes fade-LA {
-  0%   { opacity: 0; top: 35%; left: 58%; width: 40px; height: auto;}
+  0%   { opacity: 0; transform: translate(-30px, 620px) scale(0.4) rotate(25deg);}
   30%  { opacity: 1; }
-  65%  { opacity: 1; top: 35%; left: 58%; width: 40px; height: auto;}
-  100% { opacity: 1; top: 6%; left: 32%; width: 75px; height: auto;}
+  65%  { opacity: 1; transform: translate(-30px, 620px) scale(0.4) rotate(25deg);}
+  100% { opacity: 1; transform: translate(-160px, -25px) scale(0.8) rotate(0deg);}
 }
 .animate-LA {
   animation: fade-LA 3s ease-in-out forwards;

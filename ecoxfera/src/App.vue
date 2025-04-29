@@ -5,6 +5,7 @@
       <img class="header" src="@/assets/Header.png" alt="Ecoxfera Header" @click="onHeaderClick" />
       <!-- Logo SVG -->
       <LogoLetters :animState="animState" />
+      <Dandeleons :animState="animState" />
 
       <!-- Description -->
       <section class="description">
@@ -22,6 +23,7 @@
 <script setup>
 import { ref } from 'vue';
 import LogoLetters from '@/components/Logo/LogoLetters.vue'
+import Dandeleons from './components/Logo/Dandeleons.vue';
 
 const animState = ref(false)
 const onHeaderClick = () => {
