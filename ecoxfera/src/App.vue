@@ -40,7 +40,7 @@ console.log('oe')
   height: 100vh;
   overflow: hidden;
   cursor: pointer;
-  /*background: url('@/assets/paper-texture.jpg') center/cover no-repeat;*/
+  background: url('@/assets/OIP.jpg') center/cover no-repeat;
 }
 
 /* Header */

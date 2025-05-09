@@ -67,10 +67,10 @@ const letters = [
 @media screen and (min-width: 600px) {
   /* LETRA E */
   @keyframes fade-LE {
-  0%   { opacity: 0; transform: translate(60px, 680px) scale(0.9) rotate(-10deg); }
+  0%   { opacity: 0; transform: translate(60px, 680px) scale(0.7) rotate(-10deg); }
   30%  { opacity: 1;}
-  65%  { opacity: 1; transform: translate(60px, 680px) scale(0.9) rotate(-10deg); }
-  100% { opacity: 1; transform: translate(35px, 225px) scale(0.9) rotate(-50deg);}
+  65%  { opacity: 1; transform: translate(60px, 680px) scale(0.7) rotate(-10deg); }
+  100% { opacity: 1; transform: translate(75%, 150%) scale(0.7) rotate(-50deg);}
 }
 .animate-LE {
   animation: fade-LE 3s ease-in-out forwards;
@@ -78,10 +78,10 @@ const letters = [
 
 /* LETRA C */
 @keyframes fade-LC {
-  0%   { opacity: 0; transform: translate(-60px, -30px) scale(0.7) rotate(0deg);}
+  0%   { opacity: 0; transform: translate(-60px, -30px) scale(0.5) rotate(0deg);}
   30%  { opacity: 1; }
-  65%  { opacity: 1; transform: translate(50px, 640px) scale(0.7) rotate(0deg);}
-  100% { opacity: 1; transform: translate(-10px, 150px) scale(0.7) rotate(-35deg); }
+  65%  { opacity: 1; transform: translate(50px, 640px) scale(0.5) rotate(0deg);}
+  100% { opacity: 1; transform: translate(0%, 100%) scale(0.5) rotate(-35deg); }
 }
 .animate-LC {
   animation: fade-LC 3s ease-in-out forwards;
@@ -89,10 +89,10 @@ const letters = [
 
 /* LETRA O */
 @keyframes fade-LO {
-  0%   { opacity: 0; transform: translate(40px, 600px) scale(0.45) rotate(10deg);}
+  0%   { opacity: 0; transform: translate(40px, 600px) scale(0.25) rotate(10deg);}
   30%  { opacity: 1; }
-  65%  { opacity: 1; transform: translate(40px, 600px) scale(0.45) rotate(10deg);}
-  100% { opacity: 1; transform: translate(-60px, 83px) scale(0.6) rotate(-60deg); }
+  65%  { opacity: 1; transform: translate(40px, 600px) scale(0.25) rotate(10deg);}
+  100% { opacity: 1; transform: translate(-80%, 60%) scale(0.4) rotate(-60deg); }
 }
 .animate-LO {
   animation: fade-LO 3s ease-in-out forwards;
@@ -100,10 +100,10 @@ const letters = [
 
 /* LETRA X */
 @keyframes fade-LX {
-  0%   { opacity: 0; transform: translate(25px, 640px) scale(0.9) rotate(40deg); }
+  0%   { opacity: 0; transform: translate(25px, 640px) scale(0.7) rotate(40deg); }
   30%  { opacity: 1; }
-  65%  { opacity: 1; transform: translate(25px, 640px) scale(0.9) rotate(40deg); }
-  100% { opacity: 1; transform: translate(-90px, 50px) scale(0.9) rotate(-18deg); }
+  65%  { opacity: 1; transform: translate(25px, 640px) scale(0.7) rotate(40deg); }
+  100% { opacity: 1; transform: translate(-115%, 30%) scale(0.7) rotate(-18deg); }
 }
 .animate-LX {
   animation: fade-LX 3s ease-in-out forwards;
@@ -111,10 +111,10 @@ const letters = [
 
 /* LETRA F */
 @keyframes fade-LF {
-  0%   { opacity: 0; transform: translate(25px, 640px) scale(0.6) rotate(10deg); }
+  0%   { opacity: 0; transform: translate(25px, 640px) scale(0.4) rotate(10deg); }
   30%  { opacity: 1; }
-  65%  { opacity: 1; transform: translate(25px, 640px) scale(0.6) rotate(10deg);}
-  100% { opacity: 1; transform: translate(-120px, 0px) scale(0.6) rotate(-10deg);}
+  65%  { opacity: 1; transform: translate(25px, 640px) scale(0.4) rotate(10deg);}
+  100% { opacity: 1; transform: translate(-150%, 0%) scale(0.4) rotate(-10deg);}
 }
 .animate-LF {
   animation: fade-LF 3s ease-in-out forwards;
@@ -122,10 +122,10 @@ const letters = [
 
 /* SEGUNDA E */
 @keyframes fade-LE2 {
-  0%   { opacity: 0; transform: translate(0px, 640px) scale(0.7) rotate(-25deg);}
+  0%   { opacity: 0; transform: translate(0px, 640px) scale(0.5) rotate(-25deg);}
   30%  { opacity: 1; }
-  65%  { opacity: 1; transform: translate(0px, 640px) scale(0.7) rotate(-25deg);}
-  100% { opacity: 1; transform: translate(-130px, -10px) scale(0.7) rotate(-25deg);}
+  65%  { opacity: 1; transform: translate(0px, 640px) scale(0.5) rotate(-25deg);}
+  100% { opacity: 1; transform: translate(-170%, -10%) scale(0.5) rotate(-25deg);}
 }
 .animate-LE2 {
   animation: fade-LE2 3s ease-in-out forwards;
@@ -133,10 +133,10 @@ const letters = [
 
 /* LETRA R */
 @keyframes fade-LR {
-  0%   { opacity: 0; transform: translate(0px, 640px) scale(0.7) rotate(-25deg);}
+  0%   { opacity: 0; transform: translate(0px, 640px) scale(0.5) rotate(-25deg);}
   30%  { opacity: 1; }
-  65%  { opacity: 1; transform: translate(0px, 640px) scale(0.7) rotate(-25deg);}
-  100% { opacity: 1; transform: translate(-145px, -20px) scale(0.6) rotate(-5deg);}
+  65%  { opacity: 1; transform: translate(0px, 640px) scale(0.5) rotate(-25deg);}
+  100% { opacity: 1; transform: translate(-210%, -20%) scale(0.4) rotate(-5deg);}
 }
 .animate-LR {
   animation: fade-LR 3s ease-in-out forwards;
@@ -144,16 +144,17 @@ const letters = [
 
 /* LETRA A */
 @keyframes fade-LA {
-  0%   { opacity: 0; transform: translate(-30px, 620px) scale(0.4) rotate(25deg);}
+  0%   { opacity: 0; transform: translate(650%, 700%) scale(0.2) rotate(25deg);}
   30%  { opacity: 1; }
-  65%  { opacity: 1; transform: translate(-30px, 620px) scale(0.4) rotate(25deg);}
-  100% { opacity: 1; transform: translate(-160px, -25px) scale(0.8) rotate(0deg);}
+  65%  { opacity: 1; transform: translate(650%, 700%) scale(0.2) rotate(25deg);}
+  100% { opacity: 1; transform: translate(460%, -200%) scale(0.6) rotate(0deg);}
 }
 .animate-LA {
   animation: fade-LA 3s ease-in-out forwards;
   }
 }
 
+/* Animaciones para pantallas medianas */
 @media screen and (min-width: 720px) {
 
     /* LETRA E */
@@ -245,6 +246,7 @@ const letters = [
   }
 }
 
+/* Animaciones para pantallas medio grandes */
 
 @media  screen and (min-width: 861px) {
 
@@ -336,6 +338,8 @@ const letters = [
   animation: fade-LA 3s ease-in-out forwards;
   }
 }
+
+/* Animaciones para pantallas grandes */
 
 @media screen and (min-width: 1024px) {
       /* LETRA E */

@@ -77,7 +77,7 @@
     0%   { opacity: 0; transform: translate(75%, 50%) scale(2) rotate(15deg);}
     30%  { opacity: 0; }
     65%  { opacity: 0; }
-    100% { opacity: 1; transform: translate(230%, 70%) scale(3.5) rotate(-15deg);}
+    100% { opacity: 1; transform: translate(270%, 75%) scale(3.9) rotate(-15deg);}
   }
   .animate-LDanB2 {
     animation: animate-LDanB2 3.5s ease-in-out forwards;
