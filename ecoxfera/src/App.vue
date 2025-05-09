@@ -35,8 +35,10 @@ console.log('oe')
 
 <style scoped>
 /* Container */
+/*Para que la pagina sea responsive el ancho del
+  container principal no puede ser fijo*/
 .landing-container {
-  width: 100vw;
+  max-width: 100vw;
   height: 100vh;
   overflow: hidden;
   cursor: pointer;

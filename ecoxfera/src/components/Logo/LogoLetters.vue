@@ -48,7 +48,7 @@ const letters = [
 <style scoped>
 .logo-letters {
   position: relative;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
