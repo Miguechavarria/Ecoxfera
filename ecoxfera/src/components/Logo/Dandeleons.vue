@@ -77,7 +77,7 @@
     0%   { opacity: 0; transform: translate(75%, 50%) scale(2) rotate(15deg);}
     30%  { opacity: 0; }
     65%  { opacity: 0; }
-    100% { opacity: 1; transform: translate(270%, 75%) scale(3.9) rotate(-15deg);}
+    100% { opacity: 1; transform: translate(180%, 75%) scale(3) rotate(-15deg);}
   }
   .animate-LDanB2 {
     animation: animate-LDanB2 3.5s ease-in-out forwards;
@@ -278,7 +278,7 @@
   }
 }
 
-/* Para pantallas extra grandes (más de 1200px de ancho) - Puedes ajustar aún más si es necesario */
+/* Para pantallas extra grandes (más de 1024px de ancho) - Puedes ajustar aún más si es necesario */
 @media only screen and (min-width: 1024px) {
   .L-dandelions {
     width: 240px; /* Aumenta aún más para pantallas muy grandes */
@@ -297,7 +297,7 @@
     0%   { opacity: 0; transform: translate(60%, -30%) scale(2.8) rotate(5deg);}
     30%  { opacity: 0; }
     65%  { opacity: 0; }
-    100% { opacity: 1; transform: translate(60%, 30%) scale(2) rotate(-25deg);}
+    100% { opacity: 1; transform: translate(60%, 30%) scale(1.9) rotate(-25deg);}
   }
   .animate-LDanB2 {
     animation: animate-LDanB2 3.5s ease-in-out forwards;
