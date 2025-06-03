@@ -1,65 +1,165 @@
 <template>
   <div id="app">
-    <div class="landing-container">
-      <!-- Header PNG -->
-      <img class="header" src="@/assets/Header mobile.png" alt="Ecoxfera Header" @click="onHeaderClick" />
-      <!-- Logo SVG -->
-      <LogoLetters :animState="animState" />
-      <Dandeleons :animState="animState" />
+    <!-- 1) Botón hamburguesa en esquina izquierda -->
+    <button
+      class="hamburger"
+      :class="{ 'is-active': menuOpen }"
+      @click="toggleMenu"
+      aria-label="Abrir menú"
+    >
+      <span class="bar bar1"></span>
+      <span class="bar bar2"></span>
+      <span class="bar bar3"></span>
+    </button>
 
-      <!-- Description -->
-      <section class="description">
-        <div>
-          <p>Un</p>
-          <p>universo</p>
-          <p>donde florece</p>
-          <p>la conciencia</p>
-        </div>
-        <p>
-          En algún rincón del tiempo, donde la naturaleza y la imaginación se
-          entrelazan, nace Ecoxfera: un universo sensorial creado para recantar
-          nuestra relación con el planeta.
-        </p>
-      </section>
-    </div>
+    <!-- 2) Menú lateral (drawer) desde la izquierda -->
+    <nav class="menu-drawer" :class="{ open: menuOpen }">
+      <div class="drawer-header">
+        <img class="drawer-logo" src="@/assets/Logo.png" alt="Ecoxfera Logo" />
+      </div>
+      <ul class="drawer-list">
+        <li>
+          <!-- NUNCA uses “.vue” en to="/…", usa la ruta definida en router/index.js -->
+          <router-link to="/" @click="toggleMenu">Inicio</router-link>
+        </li>
+        <li>
+          <router-link to="/conoce-sus-plantas" @click="toggleMenu">
+            Conoce tus plantas
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/descripcion-proyecto" @click="toggleMenu">
+            Descripción del proyecto
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/maqueta-ensamble" @click="toggleMenu">
+            Maqueta y ensamble
+          </router-link>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- 3) Aquí se inyecta la vista actual (HomePage, ConocePlantas, etc.) -->
+    <main class="main-wrapper">
+      <router-view />
+    </main>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import LogoLetters from '@/components/Logo/LogoLetters.vue'
-import Dandeleons from './components/Logo/Dandeleons.vue';
+import { ref } from 'vue'
 
-const animState = ref(false)
-const onHeaderClick = () => {
-  animState.value = !animState.value;
-console.log('oe')
+const menuOpen = ref(false)
+const toggleMenu = () => {
+  menuOpen.value = !menuOpen.value
 }
-
 </script>
 
 <style scoped>
-/* Container */
-/*Para que la pagina sea responsive el ancho del
-  container principal no puede ser fijo*/
-.landing-container {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  cursor: pointer;
-  background: url('@/assets/OIP.jpg') center/cover no-repeat;
+/* 0) Reset mínimo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Header */
-.header {
+/* 1) Botón hamburguesa */
+.hamburger {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.4rem;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  background-color: #000;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hamburger.is-active .bar1 {
+  transform: translateY(6px) rotate(45deg);
+}
+.hamburger.is-active .bar2 {
+  opacity: 0;
+}
+.hamburger.is-active .bar3 {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* 2) Drawer/menu lateral */
+.menu-drawer {
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100VW;
-  z-index: 10;
-  object-fit: fill;
+  width: 260px;
+  height: 100%;
+  background-color: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.35s ease;
+  z-index: 45;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  overflow: hidden;
+}
+.menu-drawer.open {
+  transform: translateX(0);
 }
 
-.description {
+.drawer-header {
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  background-color: #fafafa;
+}
+.drawer-logo {
+  max-width: 140px;
+  height: auto;
 }
 
+.drawer-list {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.drawer-list a {
+  text-decoration: none;
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  color: #333;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.4rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+.drawer-list a:hover {
+  background-color: #f0f0f0;
+  color: #008000;
+}
+
+/* 3) Espacio donde cada “vista” renderizará su contenido */
+.main-wrapper {
+  margin-top: 0; /* Aquí no hace falta nada más; cada vista gobernará su scroll/fondo */
+}
 </style>

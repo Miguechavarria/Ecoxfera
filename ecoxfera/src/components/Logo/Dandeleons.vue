@@ -297,7 +297,7 @@
     0%   { opacity: 0; transform: translate(60%, -30%) scale(2.8) rotate(5deg);}
     30%  { opacity: 0; }
     65%  { opacity: 0; }
-    100% { opacity: 1; transform: translate(60%, 30%) scale(1.9) rotate(-25deg);}
+    100% { opacity: 1; transform: translate(60%, 31.5%) scale(1.9) rotate(-25deg);}
   }
   .animate-LDanB2 {
     animation: animate-LDanB2 3.5s ease-in-out forwards;
@@ -306,7 +306,7 @@
     0%   { opacity: 0; transform: translate(220%, -120%) scale(0.08) rotate(-100deg);}
     30%  { opacity: 1; }
     65%  { opacity: 1; }
-    100% { opacity: 1; transform: translate(220%, 30%) scale(0.3) rotate(40deg);}
+    100% { opacity: 1; transform: translate(-50%, 30%) scale(0.3) rotate(40deg);}
   }
   .animate-LDanS {
     animation: animate-LDanS 3.5s ease-in-out forwards;
@@ -315,7 +315,7 @@
     0%   { opacity: 0; transform: translate(-10%, -120%) scale(0.08) rotate(-100deg);}
     30%  { opacity: 1; }
     65%  { opacity: 1; }
-    100% { opacity: 1; transform: translate(150%, 40%) scale(0.75) rotate(15deg);}
+    100% { opacity: 1; transform: translate(-90%, 40%) scale(0.75) rotate(15deg);}
   }
   .animate-LDanS2 {
     animation: animate-LDanS2 3.5s ease-in-out forwards;
