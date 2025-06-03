@@ -54,6 +54,7 @@
   .L-dandelions {
     height: auto;
     opacity: 0;
+
   }
   </style>
 
@@ -68,7 +69,7 @@
     0%   { opacity: 0; transform: translate(10%, 50%) scale(1.6) rotate(-5deg);}
     30%  { opacity: 0; }
     65%  { opacity: 0; }
-    100% { opacity: 1; transform: translate(70%, 150%) scale(2.2) rotate(35deg);}
+    100% { opacity: 1; transform: translate(70%, 80%) scale(1.5) rotate(40deg);}
   }
   .animate-LDanB {
     animation: animate-LDanB 3.5s ease-in-out forwards;
@@ -77,7 +78,7 @@
     0%   { opacity: 0; transform: translate(75%, 50%) scale(2) rotate(15deg);}
     30%  { opacity: 0; }
     65%  { opacity: 0; }
-    100% { opacity: 1; transform: translate(180%, 75%) scale(3) rotate(-15deg);}
+    100% { opacity: 1; transform: translate(180%, 34%) scale(2.5) rotate(-30deg);}
   }
   .animate-LDanB2 {
     animation: animate-LDanB2 3.5s ease-in-out forwards;
@@ -86,7 +87,7 @@
     0%   { opacity: 0; transform: translate(5%, -90%) scale(0.12) rotate(-80deg);}
     30%  { opacity: 1; }
     65%  { opacity: 1; }
-    100% { opacity: 1; transform: translate(115%, 170%) scale(1) rotate(30deg);}
+    100% { opacity: 1; transform: translate(115%, 100%) scale(1) rotate(30deg);}
   }
   .animate-LDanS {
     animation: animate-LDanS 3.5s ease-in-out forwards;
@@ -95,7 +96,7 @@
     0%   { opacity: 0; transform: translate(5%, -90%) scale(0.12) rotate(-80deg);}
     30%  { opacity: 1; }
     65%  { opacity: 1; }
-    100% { opacity: 1; transform: translate(25%, 110%) scale(0.9) rotate(5deg);}
+    100% { opacity: 1; transform: translate(25%, 50%) scale(0.9) rotate(5deg);}
   }
   .animate-LDanS2 {
     animation: animate-LDanS2 3.5s ease-in-out forwards;
@@ -104,7 +105,7 @@
     0%   { opacity: 0; transform: translate(30%, -350%) scale(0.12) rotate(-80deg);}
     30%  { opacity: 1; }
     65%  { opacity: 1; }
-    100% { opacity: 1; transform: translate(30%, 130%) scale(1) rotate(50deg);}
+    100% { opacity: 1; transform: translate(30%, 40%) scale(1) rotate(50deg);}
   }
   .animate-LDanS3 {
     animation: animate-LDanS3 3.5s ease-in-out forwards;
@@ -113,7 +114,7 @@
     0%   { opacity: 0; transform: translate(-110%, -350%) scale(0.12) rotate(-80deg);}
     30%  { opacity: 1; }
     65%  { opacity: 1; }
-    100% { opacity: 1; transform: translate(-110%, 90%) scale(0.8) rotate(170deg);}
+    100% { opacity: 1; transform: translate(-110%, 5%) scale(0.8) rotate(170deg);}
   }
   .animate-LDanS4 {
     animation: animate-LDanS4 3.5s ease-in-out forwards;
@@ -122,7 +123,7 @@
     0%   { opacity: 0; transform: translate(75%, -350%) scale(0.2);}
     30%  { opacity: 0.2; }
     65%  { opacity: 0.5; }
-    100% { opacity: 1; transform: translate(480%, -20%) scale(1.2);}
+    100% { opacity: 1; transform: translate(480%, -30%) scale(1.2);}
   }
   .animate-LDanS5 {
     animation: animate-LDanS5 3.5s ease-in-out forwards;
@@ -138,7 +139,7 @@
     0%   { opacity: 0; transform: translate(0%, 40%) scale(2) rotate(-10deg);}
     30%  { opacity: 0; }
     65%  { opacity: 0; }
-    100% { opacity: 1; transform: translate(75%, 100%) scale(1.5) rotate(40deg);}
+    100% { opacity: 1; transform: translate(75%, 75%) scale(1) rotate(40deg);}
   }
   .animate-LDanB {
     animation: animate-LDanB 3.5s ease-in-out forwards;
@@ -148,7 +149,7 @@
     0%   { opacity: 0; transform: translate(72%, 40%) scale(2.5) rotate(10deg);}
     30%  { opacity: 0; }
     65%  { opacity: 0; }
-    100% { opacity: 1; transform: translate(115%, 50%) scale(2.5) rotate(-20deg);}
+    100% { opacity: 1; transform: translate(95%, 26%) scale(2) rotate(-20deg);}
   }
   .animate-LDanB2 {
     animation: animate-LDanB2 3.5s ease-in-out forwards;
@@ -215,7 +216,7 @@
     0%   { opacity: 0; transform: translate(-5%, 35%) scale(2.1) rotate(-12deg);}
     30%  { opacity: 0; }
     65%  { opacity: 0; }
-    100% { opacity: 1; transform: translate(80%, 125%) scale(1.6) rotate(42deg);}
+    100% { opacity: 1; transform: translate(80%, 78%) scale(0.9) rotate(42deg);}
   }
   .animate-LDanB {
     animation: animate-LDanB 3.5s ease-in-out forwards;
@@ -225,7 +226,7 @@
     0%   { opacity: 0; transform: translate(65%, 35%) scale(2.6) rotate(8deg);}
     30%  { opacity: 0; }
     65%  { opacity: 0; }
-    100% { opacity: 1; transform: translate(140%, 67%) scale(2.9) rotate(-27deg);}
+    100% { opacity: 1; transform: translate(100%, 32%) scale(2) rotate(-27deg);}
   }
   .animate-LDanB2 {
     animation: animate-LDanB2 3.5s ease-in-out forwards;

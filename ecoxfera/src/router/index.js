@@ -8,22 +8,22 @@ import Maqueta               from '@/views/Maqueta.vue'
 
 const routes = [
   {
-    path: '/',              
+    path: '/EcoXfera',
     name: 'home',
     component: HomePage
   },
   {
-    path: '/conoce-sus-plantas',
+    path: '/Ecoxfera/conoce-sus-plantas',
     name: 'conoce-sus-plantas',
     component: ConocePlantas
   },
   {
-    path: '/descripcion-proyecto',
+    path: '/Ecoxfera/descripcion-proyecto',
     name: 'descripcion-proyecto',
     component: DescripcionProyecto
   },
   {
-    path: '/maqueta',
+    path: '/Ecoxfera/maqueta',
     name: 'maqueta',
     component: Maqueta
   },

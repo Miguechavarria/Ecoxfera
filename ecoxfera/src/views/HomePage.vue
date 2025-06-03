@@ -1,12 +1,7 @@
 <!-- src/views/HomePage.vue -->
 <template>
-  <div class="landing-container" @click="onHeaderClick">
     <!-- 1) Header (para reiniciar animación al hacer clic) -->
-    <img
-      class="header"
-      src="@/assets/Header mobile.png"
-      alt="Ecoxfera Header"
-    />
+
 
     <!-- 2) Animaciones de LogoLetters y Dandeleons -->
     <LogoLetters :animState="animState" />
@@ -56,7 +51,6 @@
         class="stain right"
       />
     </section>
-  </div>
 </template>
 
 <script setup>
@@ -80,24 +74,10 @@ const onHeaderClick = () => {
 
 <style scoped>
 /* ---------- Fondo y Container de la Home ---------- */
-.landing-container {
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden; /* Para que al animar no aparezca scroll prematuro */
-  cursor: pointer;
-  background: url('@/assets/OIP.jpg') center/cover no-repeat;
-  position: relative;
-}
+
 
 /* ---------- Header (para reiniciar la animación) ---------- */
-.header {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  object-fit: fill;
-  z-index: 10;
-}
+
 
 /* ---------- Línea negra superior ---------- */
 .top-line {
@@ -127,6 +107,7 @@ const onHeaderClick = () => {
   gap: 1rem;
   margin-bottom: 2rem;
   position: relative;
+
 }
 
 /* 1.2) Estilos comunes a cada palabra */
@@ -153,24 +134,78 @@ const onHeaderClick = () => {
   transform: translate(270%, 60%);
 }
 
-@media (max-width: 600px) {
+@media (min-width: 600px) {
   .word {
     font-size: 1.5rem;
   }
   .w2 {
-    transform: translate(10%, 15%);
+    transform: translate(120%, 15%);
   }
   .w3 {
-    transform: translate(25%, 30%);
+    transform: translate(130%, 30%);
   }
   .w4 {
-    transform: translate(40%, 45%);
+    transform: translate(210%, 45%);
+  }
+}
+
+@media (min-width: 720px){
+  .word {
+    font-size: 2rem;
+  }
+  .w1 {
+    transform: translate(100%, 0%);
+  }
+  .w2 {
+    transform: translate(90%, 20%);
+  }
+  .w3 {
+    transform: translate(120%, 40%);
+  }
+  .w4 {
+    transform: translate(250%, 60%);
+  }
+}
+
+@media (min-width: 861px) {
+  .word {
+    font-size: 2.2rem;
+  }
+  .w1 {
+    transform: translate(50%, 0%);
+  }
+  .w2 {
+    transform: translate(70%, 20%);
+  }
+  .w3 {
+    transform: translate(120%, 40%);
+  }
+  .w4 {
+    transform: translate(230%, 60%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .word {
+    font-size: 2.4rem;
+  }
+  .w1 {
+    transform: translate(0%, 20%);
+  }
+  .w2 {
+    transform: translate(55%, 20%);
+  }
+  .w3 {
+    transform: translate(110%, 40%);
+  }
+  .w4 {
+    transform: translate(220%, 60%);
   }
 }
 
 /* 1.5) Párrafos explicativos */
 .paragraphs {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   line-height: 1.6;
   text-align: justify;
   color: #444;
@@ -188,7 +223,7 @@ const onHeaderClick = () => {
   position: absolute;
   width: 350px;
   opacity: 0.4;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .stain.left {

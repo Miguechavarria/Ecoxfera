@@ -1,5 +1,10 @@
 <template>
-  <div id="app">
+  <div class="landing-container" @click="onHeaderClick">
+    <img
+      class="header"
+      src="@/assets/Header mobile.png"
+      alt="Ecoxfera Header"
+    />
     <!-- 1) Botón hamburguesa en esquina izquierda -->
     <button
       class="hamburger"
@@ -19,21 +24,21 @@
       </div>
       <ul class="drawer-list">
         <li>
-          <!-- NUNCA uses “.vue” en to="/…", usa la ruta definida en router/index.js -->
-          <router-link to="/" @click="toggleMenu">Inicio</router-link>
+
+          <router-link to="/Ecoxfera" @click="toggleMenu">Inicio</router-link>
         </li>
         <li>
-          <router-link to="/conoce-sus-plantas" @click="toggleMenu">
+          <router-link to="/Ecoxfera/conoce-sus-plantas" @click="toggleMenu">
             Conoce tus plantas
           </router-link>
         </li>
         <li>
-          <router-link to="/descripcion-proyecto" @click="toggleMenu">
+          <router-link to="/Ecoxfera/descripcion-proyecto" @click="toggleMenu">
             Descripción del proyecto
           </router-link>
         </li>
         <li>
-          <router-link to="/maqueta-ensamble" @click="toggleMenu">
+          <router-link to="/Ecoxfera/maqueta-ensamble" @click="toggleMenu">
             Maqueta y ensamble
           </router-link>
         </li>
@@ -63,6 +68,25 @@ const toggleMenu = () => {
   padding: 0;
   box-sizing: border-box;
 }
+
+.landing-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Para que al animar no aparezca scroll prematuro */
+  cursor: pointer;
+  background: url('@/assets/OIP.jpg') center/cover no-repeat;
+  position: relative;
+}
+
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  object-fit: fill;
+  z-index: 10;
+}
+
 
 /* 1) Botón hamburguesa */
 .hamburger {

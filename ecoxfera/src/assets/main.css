@@ -18,13 +18,3 @@ a,
     background-color: hsla(0, 0%, 100%, 0.2);
   }
 }
-
-@media (min-width: 600px) {
-  body {
-    display: flex;
-    place-items: center;
-    background-color: white;
-  }
-
-
-}
