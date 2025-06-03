@@ -1,8 +1,5 @@
 <!-- src/views/HomePage.vue -->
 <template>
-    <!-- 1) Header (para reiniciar animación al hacer clic) -->
-
-
     <!-- 2) Animaciones de LogoLetters y Dandeleons -->
     <LogoLetters :animState="animState" />
     <Dandeleons   :animState="animState" />
