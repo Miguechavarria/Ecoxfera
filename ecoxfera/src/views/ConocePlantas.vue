@@ -208,7 +208,7 @@ function toggleSection(sIdx) {
   background-color: #f5f5f5;
   border: 1px solid #ddd;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
   white-space: nowrap;
@@ -224,15 +224,15 @@ function toggleSection(sIdx) {
 --------------------------------------------------*/
 .plant-header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.6rem;
 }
 .plant-name {
-  font-size: 3.5rem;
+  font-size: 5rem;
   margin-bottom: 0.3rem;
   color: #555;
 }
 .plant-latin {
-  font-size: 2rem;
+  font-size: 3rem;
   font-style: italic;
   color: #777;
 }
@@ -241,7 +241,7 @@ function toggleSection(sIdx) {
    3) Acordeones de secciones
 --------------------------------------------------*/
 .sections {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -273,7 +273,7 @@ function toggleSection(sIdx) {
 
 .section-content {
   padding: 1rem 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: #444;
   line-height: 1.6;
 }

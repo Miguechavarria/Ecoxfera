@@ -71,10 +71,10 @@ const toggleMenu = () => {
 
 .landing-container {
   width: 100%;
-  height: 100vh;
-  overflow: hidden; /* Para que al animar no aparezca scroll prematuro */
+  min-height: 100vh;
+  overflow-y: auto;
   cursor: pointer;
-  background: url('@/assets/OIP.jpg') center/cover no-repeat;
+  background: url('@/assets/OIP.jpg') center/cover no-repeat fixed;
   position: relative;
 }
 
@@ -131,7 +131,7 @@ const toggleMenu = () => {
   position: fixed;
   top: 0;
   left: 0;
-  width: 260px;
+  width: 300px;
   height: 100%;
   background-color: #fff;
   transform: translateX(-100%);
@@ -148,6 +148,7 @@ const toggleMenu = () => {
 }
 
 .drawer-header {
+  margin-top: 3rem;
   padding: 1.5rem 1rem;
   display: flex;
   justify-content: center;
@@ -156,7 +157,7 @@ const toggleMenu = () => {
   background-color: #fafafa;
 }
 .drawer-logo {
-  max-width: 140px;
+  max-width: 180px;
   height: auto;
 }
 
@@ -168,22 +169,29 @@ const toggleMenu = () => {
   flex-direction: column;
   gap: 1rem;
 }
+
 .drawer-list a {
-  text-decoration: none;
+  display: block;            /* Hace que cada enlace sea un bloque completo */
+  width: 100%;               /* Asegura que ocupe todo el ancho del menú */
+  padding: 0.5rem 1.2rem;     
   font-family: 'Georgia', serif;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
+  line-height: 1.4;          /* Espacio vertical entre líneas */
+  word-break: break-word;    /* Permite salto amigable */
+  white-space: normal;       /* Para que pueda envolver texto en varias líneas */
   color: #333;
-  padding: 0.5rem 1.2rem;
-  border-radius: 0.4rem;
-  transition: background-color 0.2s, color 0.2s;
+  text-decoration: none;
 }
 .drawer-list a:hover {
   background-color: #f0f0f0;
   color: #008000;
 }
 
+
 /* 3) Espacio donde cada “vista” renderizará su contenido */
 .main-wrapper {
-  margin-top: 0; /* Aquí no hace falta nada más; cada vista gobernará su scroll/fondo */
+  margin-top: 0; 
+  padding-top: 80px;
+  min-height: calc(100vh-80px);
 }
 </style>

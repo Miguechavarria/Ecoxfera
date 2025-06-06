@@ -1,14 +1,20 @@
+// src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 
-// IMPORTA aquí los componentes que serán “páginas”
-import HomePage              from '@/views/HomePage.vue'
-import ConocePlantas         from '@/views/ConocePlantas.vue'
-import DescripcionProyecto   from '@/views/DescripcionProyecto.vue'
-import Maqueta               from '@/views/Maqueta.vue'
+// Importa aquí tus vistas (asegúrate que los nombres coincidan exactamente)
+import HomePage            from '@/views/HomePage.vue'
+import ConocePlantas       from '@/views/ConocePlantas.vue'
+import DescripcionProyecto from '@/views/DescripcionProyecto.vue'
+import Maqueta             from '@/views/Maqueta.vue'
 
+// Definimos claramente una ruta “/” que apunte a HomePage (o redirija a /Ecoxfera)
 const routes = [
   {
-    path: '/EcoXfera',
+    path: '/',
+    redirect: '/Ecoxfera' // Redirigimos “/” a “/Ecoxfera”
+  },
+  {
+    path: '/Ecoxfera',
     name: 'home',
     component: HomePage
   },
@@ -27,12 +33,15 @@ const routes = [
     name: 'maqueta',
     component: Maqueta
   },
-  // rutas no definidas redirijen al Home:
-  { path: '/:pathMatch(.*)*', redirect: '/' }
+  // Cualquier otra URL no definida, redirigir a /Ecoxfera
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/Ecoxfera'
+  }
 ]
 
 const router = createRouter({
-  history: createWebHistory(),  // Usa history “normal” (sin hash); si quieres hash-style, usa createWebHashHistory()
+  history: createWebHistory(), 
   routes
 })
 
